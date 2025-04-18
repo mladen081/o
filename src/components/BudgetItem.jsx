@@ -1,5 +1,4 @@
 import React from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,6 +13,21 @@ const BudgetItem = ({
   cancelEdit,
   formatCurrency,
 }) => {
+  const months = [
+    "januar",
+    "februar",
+    "mart",
+    "april",
+    "maj",
+    "jun",
+    "jul",
+    "avgust",
+    "septembar",
+    "oktobar",
+    "novembar",
+    "decembar",
+  ];
+
   return editingId === item.id ? (
     <li>
       <form onSubmit={handleEditSubmit}>
@@ -30,7 +44,7 @@ const BudgetItem = ({
         <div>
           <label>Value</label>
           <input
-            type="number"
+            type="text"
             value={editBudget.value}
             onChange={(e) =>
               setEditBudget({ ...editBudget, value: Number(e.target.value) })
@@ -39,13 +53,19 @@ const BudgetItem = ({
         </div>
         <div>
           <label>Month</label>
-          <input
-            type="text"
+          <select
             value={editBudget.month}
             onChange={(e) =>
               setEditBudget({ ...editBudget, month: e.target.value })
             }
-          />
+          >
+            <option value="">-- Choose Month--</option>
+            {months.map((month) => (
+              <option key={month} value={month}>
+                {month.charAt(0).toUpperCase() + month.slice(1)}
+              </option>
+            ))}
+          </select>
         </div>
         <div>
           <label>Year</label>
@@ -66,7 +86,7 @@ const BudgetItem = ({
   ) : (
     <li>
       <p>
-        {item.name} - {formatCurrency(item.value)}
+        {item.name} - {formatCurrency(item.value)} - {item.month} {item.year}
         <FontAwesomeIcon
           icon={faEdit}
           onClick={() => startEdit(item)}

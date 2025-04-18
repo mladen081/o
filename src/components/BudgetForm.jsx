@@ -1,6 +1,21 @@
 import React from "react";
 
 const BudgetForm = ({ newBudget, setNewBudget, handleCreate }) => {
+  const months = [
+    "januar",
+    "februar",
+    "mart",
+    "april",
+    "maj",
+    "jun",
+    "jul",
+    "avgust",
+    "septembar",
+    "oktobar",
+    "novembar",
+    "decembar",
+  ];
+
   return (
     <form onSubmit={handleCreate}>
       <h2 className="green-t">Create item</h2>
@@ -33,16 +48,21 @@ const BudgetForm = ({ newBudget, setNewBudget, handleCreate }) => {
 
       <div>
         <label htmlFor="new-budget-month">Month</label>
-        <input
+        <select
           id="new-budget-month"
-          type="text"
-          placeholder="Month"
           value={newBudget.month}
           onChange={(e) =>
             setNewBudget({ ...newBudget, month: e.target.value })
           }
           required
-        />
+        >
+          <option value="">-- Choose Month --</option>
+          {months.map((month) => (
+            <option key={month} value={month}>
+              {month.charAt(0).toUpperCase() + month.slice(1)}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div>
