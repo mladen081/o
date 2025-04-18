@@ -19,7 +19,7 @@ const Signup = () => {
 
     try {
       await axios.post(
-        "http://localhost:8000/auth/",
+        "https://test-fast-j6s3.onrender.com/auth/",
         {
           username,
           email,

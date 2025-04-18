@@ -13,7 +13,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/auth/token-json",
+        "https://test-fast-j6s3.onrender.com/auth/token-json",
         { username, password },
         {
           headers: {
