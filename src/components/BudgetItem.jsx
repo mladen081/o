@@ -32,8 +32,9 @@ const BudgetItem = ({
     <li>
       <form onSubmit={handleEditSubmit}>
         <div>
-          <label>Name</label>
+          <label htmlFor="edit-name">Name</label>
           <input
+            id="edit-name"
             type="text"
             value={editBudget.name}
             onChange={(e) =>
@@ -42,8 +43,9 @@ const BudgetItem = ({
           />
         </div>
         <div>
-          <label>Value</label>
+          <label htmlFor="edit-value">Value</label>
           <input
+            id="edit-value"
             type="text"
             value={editBudget.value}
             onChange={(e) =>
@@ -52,8 +54,9 @@ const BudgetItem = ({
           />
         </div>
         <div>
-          <label>Month</label>
+          <label htmlFor="edit-month">Month</label>
           <select
+            id="edit-month"
             value={editBudget.month}
             onChange={(e) =>
               setEditBudget({ ...editBudget, month: e.target.value })
@@ -68,8 +71,9 @@ const BudgetItem = ({
           </select>
         </div>
         <div>
-          <label>Year</label>
+          <label htmlFor="edit-year">Year</label>
           <input
+            id="edit-year"
             type="number"
             value={editBudget.year}
             onChange={(e) =>
