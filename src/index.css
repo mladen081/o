@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"); */
-
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap");
 
 *,
@@ -10,9 +8,11 @@
   box-sizing: inherit;
   font-weight: 400;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: "Mulish", sans-serif;
   box-sizing: border-box;
@@ -41,7 +41,6 @@ h1 {
 
 h2 {
   font-size: 4rem;
-  /* font-family: "Pacifico", cursive; */
   font-family: "Mulish", sans-serif;
   text-transform: none;
 }
@@ -50,12 +49,6 @@ p {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
-
-.green-t {
-  color: #de4a4e;
-}
-
-/* nav */
 
 nav {
   padding: 2rem;
@@ -96,10 +89,6 @@ nav ul li a:hover {
   color: #de4a4e;
 }
 
-/* nav end*/
-
-/* form */
-
 form {
   margin: 0 0 5rem 0;
 }
@@ -126,8 +115,6 @@ form select {
   padding: 0.5rem;
   width: 30rem;
 }
-
-/* form end */
 
 button {
   font-family: "Alfa Slab One", serif;
@@ -162,23 +149,12 @@ button:focus {
   color: #de4a4e;
 }
 
-.flex-cont {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: space-around;
-}
-
-.flex-cont .c-right {
-  display: flex;
-  flex-direction: column;
-}
-
 .footer {
   background-color: #fff;
   color: #0b0b0b;
   text-align: center;
   padding: 1rem 0;
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-image: url("/b1.jpg");
