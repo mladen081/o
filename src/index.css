@@ -33,6 +33,7 @@ main {
 
 .main-content {
   flex: 1;
+  padding-top: 12rem;
 }
 
 h1 {
@@ -61,7 +62,14 @@ p {
 /* nav */
 
 nav {
-  padding: 2%;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 ul {
