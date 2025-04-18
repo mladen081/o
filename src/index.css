@@ -21,10 +21,6 @@ body {
   text-align: center;
 }
 
-main {
-  padding: 2%;
-}
-
 .app-container {
   display: flex;
   flex-direction: column;
@@ -181,7 +177,7 @@ button:focus {
   background-color: #fff;
   color: #0b0b0b;
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   position: relative;
   bottom: 0;
   width: 100%;
