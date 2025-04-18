@@ -8,11 +8,9 @@
   box-sizing: inherit;
   font-weight: 400;
 }
-
 html {
   font-size: 62.5%;
 }
-
 body {
   font-family: "Mulish", sans-serif;
   box-sizing: border-box;
@@ -48,6 +46,10 @@ h2 {
 p {
   font-size: 1.5rem;
   margin: 1rem 0;
+}
+
+.green-t {
+  color: #de4a4e;
 }
 
 nav {
@@ -149,12 +151,23 @@ button:focus {
   color: #de4a4e;
 }
 
+.flex-cont {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-cont .c-right {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   background-color: #fff;
   color: #0b0b0b;
   text-align: center;
   padding: 1rem 0;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   background-image: url("/b1.jpg");
